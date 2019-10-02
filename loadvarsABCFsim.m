@@ -10,11 +10,12 @@ mtot=5;
 
 Lstep=8; ksp=0.5;
 
-nruns=2000;
-FF=-5:4:15;
+nruns=100; %number of runs
+FF=-5:4:15; %loading forces 
 nFF=length(FF);
-Vsim=zeros(nFF,1); Dsim=zeros(nFF,1);
-Xgroup=cell(nFF,1);
+Vsim=zeros(nFF,1); %asymptotic velocity
+Dsim=zeros(nFF,1); %asymptotic diffusivity
+Xgroup=cell(nFF,1); %position of the group 
 for i=1:nFF
 [Vsim(i), Dsim(i), Xgroup{i}, tmax]=simsemimarkovstd4(FF(i),nruns,kab,kba,kbc,kcb,kcf,kfc, ksf0, ksb0, kdet0, katt, dokbt, mtot, Lstep, ksp);
 end
