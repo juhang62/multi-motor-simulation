@@ -1,14 +1,20 @@
 clear
 global kab kba kbc kcb kcf kfc ksf0 ksb0 kdet0 katt dokbt mtot Lstep ksp
+
+%%%%%%%%%kinetic parameters
 kab=4000;kba=2500;kbc=3000;kcb=2000;kcf=4000;kfc=4000;
+
+%%%%force dependent rate at zero force
 ksf0=300;ksb0=50;
 
-kdet0=1;katt=3;
+kdet0=1; %rate of detachment at zero force
+katt=3; %rate of attachment
 dokbt=0.15; %delta/kbt
 
-mtot=5;
+mtot=5; %number of motors
 
-Lstep=8; ksp=0.5;
+Lstep=8; %length of a phyiscal step
+ksp=0.5; %spring constant
 
 nruns=100; %number of runs
 FF=-5:4:15; %loading forces 

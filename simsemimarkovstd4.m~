@@ -1,4 +1,5 @@
-function [Vsim, Dsim, Xgroup, tmax]=simsemimarkovstd4(F,nruns,kab,kba,kbc,kcb,kcf,kfc, ksf0, ksb0, kdet0, katt, dokbt, mtot, Lstep, ksp) 
+function [Vsim, Dsim, Xgroup, tmax]=simsemimarkovstd4(F,nruns,kab,kba,kbc,kcb,kcf,kfc, ksf0, ksb0, kdet0, katt, dokbt, mtot, Lstep, ksp)
+%%%%%%%simulate nruns and ret
 tmax=5; %maximum run time
 Xgroup=zeros(nruns,1); %prellocate for the average position of the group 
 parfor irun=1:nruns %parallel for loops
